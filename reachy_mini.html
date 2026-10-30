@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dimostrazione e simulazione robotica di Reachy Mini — Progetto di Martino Buzzi">
+    <title>Reachy Mini Simulation — Martino Buzzi</title>
+    <link rel="stylesheet" href="css_reachy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">&larr; Torna al Portfolio</a>
+        <span class="eyebrow">// robotica &amp; simulazione</span>
+    </nav>
+</header>
+
+<main class="container py-5">
+
+    <!-- INTRODUZIONE PROGETTO -->
+    <section class="project-hero text-center mb-5">
+        <p class="eyebrow">// human-robot interaction</p>
+        <h1>Reachy Mini — Assistente per la Stimolazione Cognitiva</h1>
+        <p class="hero-lead max-w-2xl mx-auto">
+            Dimostrazione pratica del sistema di interazione e simulazione sviluppato in Python per il robot Reachy Mini. 
+            Il progetto combina sintesi vocale SAPI, risposte cinetiche (movimenti della testa e delle antenne) e quiz multimediali per la stimolazione della memoria negli anziani.
+        </p>
+        <div class="technologies justify-content-center mt-3">
+            <span>Python</span>
+            <span>Reachy Mini SDK</span>
+            <span>Pygame</span>
+            <span>Tkinter</span>
+            <span>Win32Com (SAPI)</span>
+        </div>
+    </section>
+
+    <!-- PRIMA RIGA: I 3 VIDEO INIZIALI -->
+    <section class="video-grid mb-5">
+        
+        <!-- VIDEO 1: Saluto Iniziale -->
+        <article class="video-card">
+            <div class="video-wrapper">
+                <video autoplay loop muted controls playsinline poster="assets/img/reachy-preview1.jpg">
+                    <source src="mp4/saluto_iniziale.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>01. Risveglio &amp; Saluto Iniziale</h3>
+                <p>Il robot parte da una posizione di riposo rilassata (testa inclinata). Su comando dell'operatore si risveglia, orienta il capo verso l'utente e avvia l'accoglienza con sintesi vocale rallentata.</p>
+            </div>
+        </article>
+
+        <!-- VIDEO 2: Scelta Attività -->
+        <article class="video-card">
+            <div class="video-wrapper">
+                <video autoplay loop muted controls playsinline poster="assets/img/reachy-preview2.jpg">
+                    <source src="mp4/video_scelta_attivita.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>02. Selezione Attività &amp; Menu Interattivo</h3>
+                <p>Reachy presenta le opzioni disponibili (quiz musicale, quiz visivo o chiusura) inclinando la testa per mostrare ascolto e attenzione durante la risposta dell'operatore.</p>
+            </div>
+        </article>
+
+        <!-- VIDEO 3: Canta e Balla -->
+        <article class="video-card">
+            <div class="video-wrapper">
+                <video autoplay loop muted controls playsinline poster="assets/img/reachy-preview3.jpg">
+                    <source src="mp4/canta_balla.mp4" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>03. Quiz Musicale &amp; Movimento Ritmico</h3>
+                <p>Sincronizzazione tra audio (<code>pygame.mixer</code>) e cinematica: il robot esegue movimenti di danza e oscillazioni alternate delle antenne per tutta la durata del brano d'epoca.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- SECONDA RIGA: I 2 VIDEO DI FEEDBACK CENTRATI CON DESCRIZIONE UNICA -->
+    <section class="feedback-container">
+        <article class="video-card feedback-card">
+            <div class="feedback-videos-wrapper">
+                <div class="video-wrapper">
+                    <video autoplay loop muted controls playsinline poster="assets/img/reachy-preview5.jpg">
+                        <source src="mp4/conferma_testa.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                    <span class="video-label">Assenso (Conferma)</span>
+                </div>
+                <div class="video-wrapper">
+                    <video autoplay loop muted controls playsinline poster="assets/img/reachy-preview4.jpg">
+                        <source src="mp4/errore_testa.mp4" type="video/mp4">
+                        Il tuo browser non supporta il tag video.
+                    </video>
+                    <span class="video-label">Dissenso (Errore)</span>
+                </div>
+            </div>
+            <div class="video-info text-center">
+                <h3>04. Feedback Cinetico Emotivo (Assenso &amp; Dissenso)</h3>
+                <p>
+                    Dimostrazione del calcolo delle matrici di trasformazione 3D (Pitch, Roll e Yaw) applicate alla cinematica del robot:
+                    cenni rapidi e festosi di assenso per confermare le risposte corrette, alternati a scuotimenti dolci e delicati per segnalare l'errore senza generare frustrazione nell'utente.
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!-- FOOTER DI PAGINA -->
+    <div class="text-center mt-5">
+        <a href="https://github.com/MartinoBuzzi/reachy-mini-quiz" target="_blank" rel="noopener noreferrer" class="button button-primary">
+            Vedi il Codice Sorgente su GitHub &rarr;
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Martino Buzzi</p>
+</footer>
+
+</body>
+</html>
